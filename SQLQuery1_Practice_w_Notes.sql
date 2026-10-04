@@ -246,3 +246,15 @@ WHERE Price > 10 AND Qty_Sold < 50
 GROUP BY Product_Name
 ORDER BY Product_Name ASC;
 
+--SQL Predicates: Defining Your Conditions
+
+SELECT * FROM SalesData;
+
+-- BETWEEN PREDICATE
+SELECT Product_Name, Price FROM SalesData WHERE Price Between 1 and 10;
+
+-- IN PREDICATE
+select Product_Name, Price, Qty_Sold From SalesData 
+-- LIKE PREDICATE
+
+-- IS NULL PREDICATE

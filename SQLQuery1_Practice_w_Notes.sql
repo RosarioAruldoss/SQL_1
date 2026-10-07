@@ -254,7 +254,16 @@ SELECT * FROM SalesData;
 SELECT Product_Name, Price FROM SalesData WHERE Price Between 1 and 10;
 
 -- IN PREDICATE
-select Product_Name, Price, Qty_Sold From SalesData 
+SELECT Product_Name, AVG(Price) AS Avg_Price From SalesData WHERE Product_Name in ('Apple','Banana')
+GROUP BY Product_Name;
+
 -- LIKE PREDICATE
+SELECT Product_Name, Price, Qty_Sold FROM SalesData WHERE Product_Name LIKE 'Apple';
+-- ARITHEMETIC OPERATOR
+SELECT Product_Name, AVG(Price) AS AvgPrice FROM SalesData WHERE Product_Name = 'Apple'
+GROUP BY Product_Name;
+
+-- LIKE PREDICATE (with partial letters) (Usage of % for coverup)
+SELECT Product_Name, Price, Qty_Sold FROM SalesData WHERE Product_Name LIKE 'App%';
 
 -- IS NULL PREDICATE
